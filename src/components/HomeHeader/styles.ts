@@ -16,12 +16,12 @@ export const Greeting = styled.View`
 
 export const Message = styled.Text`
   color: ${({ theme }) => theme.COLORS.GRAY_100};
-  font-size: ${({ theme }) => theme.FONT_SIZE.MD};
+  font-size: ${({ theme }) => theme.FONT_SIZE.MD}px;
   font-family: ${({ theme }) => theme.FONT_FAMILY.REGULAR}; 
 `;
 
 export const Name = styled.Text`
   color: ${({ theme }) => theme.COLORS.GRAY_100};
-  font-size: ${({ theme }) => theme.FONT_SIZE.LG};
+  font-size: ${({ theme }) => theme.FONT_SIZE.LG}px;
   font-family: ${({ theme }) => theme.FONT_FAMILY.BOLD}; 
 `;
