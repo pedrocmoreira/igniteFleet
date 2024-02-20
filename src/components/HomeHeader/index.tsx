@@ -1,5 +1,5 @@
 import { TouchableOpacity } from 'react-native';
-import { Power } from 'phosphor-react-native';
+import Feather from '@expo/vector-icons/Feather'
 
 import {
   Container,
@@ -7,6 +7,7 @@ import {
   Message,
   Name
 } from './styles';
+import theme from '../../theme';
 
 export function HomeHeader() {
   return (
@@ -18,7 +19,7 @@ export function HomeHeader() {
       </Greeting>
 
       <TouchableOpacity>
-        <Power/>
+        <Feather name='power' size={28} color={theme.COLORS.GRAY_400}/>
       </TouchableOpacity>
     </Container>
   );
