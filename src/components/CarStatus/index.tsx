@@ -1,4 +1,5 @@
 import { useTheme } from 'styled-components';
+import { TouchableOpacityProps } from 'react-native';
 import {
   Container,
   IconBox,
@@ -9,11 +10,11 @@ import {
 import AntDesign from '@expo/vector-icons/AntDesign';
 
 
-type Props = {
+type Props = TouchableOpacityProps & {
   licensePlate?: string | null;
 }
 
-export function CarStatus({ licensePlate = null }: Props) {
+export function CarStatus({ licensePlate = null, ...rest }: Props) {
   const theme = useTheme();
 
   const icon = licensePlate ? 'key' : 'car';
@@ -21,7 +22,7 @@ export function CarStatus({ licensePlate = null }: Props) {
   const status = licensePlate ? 'chegada' : 'saída'
 
   return (
-    <Container>
+    <Container {...rest} activeOpacity={0.7}>
       <IconBox>
         <AntDesign
           name={icon}
