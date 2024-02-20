@@ -1,4 +1,5 @@
 import { Realm } from '@realm/react';
+import { ObjectSchema } from 'realm';
 
 type GenerateProps = {
   user_id: string;
@@ -28,7 +29,7 @@ export class Historic extends Realm.Object<Historic> {
     };
   }
 
-  static schema = {
+  static schema: ObjectSchema = {
     //aqui é onde fica a estrutura que vai ser armazenada no banco
     //lembrando que os tipos abaixo são do realmDB
     name: 'Historic',
