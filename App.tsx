@@ -6,10 +6,10 @@ import { AppProvider , UserProvider } from '@realm/react'
 import theme from './src/theme/index';
 
 import { SignIn } from './src/screens/SignIn';
-import { Home } from './src/screens/Home';
 import { Loading } from './src/components/Loading';
 
 import {REALM_APP_ID} from '@env';
+import { Routes } from './src/routes';
 
 export default function App() {
   const [fontsLoaded] = useFonts({ Roboto_400Regular, Roboto_700Bold });
@@ -25,7 +25,7 @@ export default function App() {
     <ThemeProvider theme={theme}>
       <StatusBar barStyle='light-content' backgroundColor='transparent' translucent />
       <UserProvider fallback={SignIn}>
-        <Home/>
+        <Routes/>
       </UserProvider>
     </ThemeProvider>
     </AppProvider>

@@ -20,7 +20,7 @@ Lembrando que é necessário ter uma conta no [Figma](http://figma.com/) para po
   git clone branch_url
   cd igniteFleet
   npm install
-  expo start
+  npx expo run:android / npx expo run:ios
 ```
 ```
 Lembrando que será necessária a criação de chaves de API no GPC (Google Cloud Console), para utilizar a funcionalidade de autenticação da aplicação.
