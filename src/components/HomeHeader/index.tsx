@@ -1,7 +1,8 @@
 import { TouchableOpacity } from 'react-native';
-import { useUser } from '@realm/react';
+import { useUser, useApp } from '@realm/react';
 
 import Feather from '@expo/vector-icons/Feather';
+import theme from '../../theme';
 
 
 import {
@@ -11,10 +12,14 @@ import {
   Name,
   Picture
 } from './styles';
-import theme from '../../theme';
 
 export function HomeHeader() {
   const user = useUser();
+  const app = useApp();
+
+  function handleLogout(){
+    app.currentUser?.logOut();
+  }
 
   return (
     <Container>
@@ -31,7 +36,7 @@ export function HomeHeader() {
         </Name>
       </Greeting>
 
-      <TouchableOpacity>
+      <TouchableOpacity onPress={handleLogout} activeOpacity={0.7}>
         <Feather name='power' size={28} color={theme.COLORS.GRAY_400}/>
       </TouchableOpacity>
     </Container>
